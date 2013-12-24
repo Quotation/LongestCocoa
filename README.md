@@ -8,7 +8,7 @@ SoWhatIsTheLongestMethodOrConstantNamesInCocoaFramework? Here are some superb on
 * outputImageProviderFromBufferWithPixelFormat:pixelsWide:pixelsHigh:baseAddress:bytesPerRow:releaseCallback:releaseContext:colorSpace:shouldColorMatch:
 * kCMSampleBufferConduitNotificationParameter_UpcomingOutputPTSRangeMayOverlapQueuedOutputPTSRange
 
-Run `python longest.py` to discover the longest 10 names for each identifier type. Below is the output from `python longest.py iphoneos`.
+Run `python longest.py` to discover the first 10 longest names for each identifier type. Below is the output from `python longest.py iphoneos`.
 
 Longest Names For iPhoneOS armv7
 ================
