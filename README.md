@@ -10,35 +10,36 @@ SoWhatAreTheLongestMethodOrConstantNamesInCocoaFramework? Here are some superb o
 
 Run `python longest.py` to discover the first 10 longest names for each identifier type. Below is the output from `python longest.py iphoneos` and `python longest.py macosx`.
 
+Compiled using Xcode 6.1.1 (6A2008a)
 
-Longest Names For iPhoneOS armv7
+Longest Names For iPhoneOS armv7 (iOS 8.1)
 ================
 
 Longest Objective-C Interface Names
 ----------------
+* [50] AVCaptureManualExposureBracketedStillImageSettings
+* [48] AVCaptureAutoExposureBracketedStillImageSettings
+* [47] AVAudioEnvironmentDistanceAttenuationParameters
 * [47] AVAssetResourceLoadingContentInformationRequest
+* [47] MTLRenderPipelineColorAttachmentDescriptorArray
 * [45] UICollectionViewFlowLayoutInvalidationContext
+* [43] MTLRenderPassColorAttachmentDescriptorArray
+* [42] MTLRenderPipelineColorAttachmentDescriptor
 * [41] AVMutableVideoCompositionLayerInstruction
 * [41] UICollectionViewLayoutInvalidationContext
-* [37] AVAsynchronousVideoCompositionRequest
-* [36] AVMutableVideoCompositionInstruction
-* [36] UIPercentDrivenInteractiveTransition
-* [36] AVAssetWriterInputPixelBufferAdaptor
-* [36] GKFriendRequestComposeViewController
-* [35] AVVideoCompositionCoreAnimationTool
 
 Longest Objective-C Protocol Names
 ----------------
 * [44] UIViewControllerTransitionCoordinatorContext
 * [44] GKFriendRequestComposeViewControllerDelegate
 * [44] AVCaptureAudioDataOutputSampleBufferDelegate
+* [44] PKPaymentAuthorizationViewControllerDelegate
 * [44] AVCaptureVideoDataOutputSampleBufferDelegate
 * [43] GKTurnBasedMatchmakerViewControllerDelegate
 * [42] ABPeoplePickerNavigationControllerDelegate
+* [42] EAWiFiUnconfiguredAccessoryBrowserDelegate
+* [40] UIAdaptivePresentationControllerDelegate
 * [40] UIViewControllerInteractiveTransitioning
-* [39] UIDocumentInteractionControllerDelegate
-* [38] AVCaptureMetadataOutputObjectsDelegate
-* [38] MFMessageComposeViewControllerDelegate
 
 Longest Objective-C Property Names
 ----------------
@@ -50,21 +51,21 @@ Longest Objective-C Property Names
 * [46] automaticallyConfiguresApplicationAudioSession
 * [45] requiredPixelBufferAttributesForRenderContext
 * [44] modalPresentationCapturesStatusBarAppearance
+* [43] canPerformMultiplePassesOverSourceMediaData
 * [42] usesAirPlayVideoWhileAirPlayScreenIsActive
-* [42] providesPresentationContextTransitionStyle
 
 Longest Objective-C Method Names
 ----------------
+* [139] copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:
+* [139] copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:
 * [128] initRecurrenceWithFrequency:interval:daysOfTheWeek:daysOfTheMonth:monthsOfTheYear:weeksOfTheYear:daysOfTheYear:setPositions:end:
+* [126] copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:
+* [120] geometrySourceWithData:semantic:vectorCount:floatComponents:componentsPerVector:bytesPerComponent:dataOffset:dataStride:
 * [120] drawStrikethroughForGlyphRange:strikethroughType:baselineOffset:lineFragmentRect:lineFragmentGlyphRange:containerOrigin:
 * [115] layoutManager:boundingBoxForControlGlyphAtIndex:forTextContainer:proposedLineFragment:glyphPosition:characterIndex:
 * [113] decimalNumberHandlerWithRoundingMode:scale:raiseOnExactness:raiseOnOverflow:raiseOnUnderflow:raiseOnDivideByZero:
 * [112] drawUnderlineForGlyphRange:underlineType:baselineOffset:lineFragmentRect:lineFragmentGlyphRange:containerOrigin:
 * [111] getLineFragmentInsertionPointsForCharacterAtIndex:alternatePositions:inDisplayOrder:positions:characterIndexes:
-* [108] migrateStoreFromURL:type:options:withMappingModel:toDestinationURL:destinationType:destinationOptions:error:
-* [104] videoComposition:shouldContinueValidatingAfterFindingInvalidTrackIDInInstruction:layerInstruction:asset:
-* [101] animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion:
-* [98] strikethroughGlyphRange:strikethroughType:lineFragmentRect:lineFragmentGlyphRange:containerOrigin:
 
 Longest Objective-C Method Names (0/1 Parameter)
 ----------------
@@ -76,77 +77,76 @@ Longest Objective-C Method Names (0/1 Parameter)
 * [60] backButtonBackgroundVerticalPositionAdjustmentForBarMetrics:
 * [60] setAutomaticallyEnablesStillImageStabilizationWhenAvailable:
 * [59] generateIdentityVerificationSignatureWithCompletionHandler:
-* [57] recommendedVideoSettingsForAssetWriterWithOutputFileType:
-* [57] recommendedAudioSettingsForAssetWriterWithOutputFileType:
+* [59] assetReaderOutputMetadataAdaptorWithAssetReaderTrackOutput:
+* [58] startSearchingForUnconfiguredAccessoriesMatchingPredicate:
 
 Longest C Function Names
 ----------------
-* [63] CTFontCollectionCreateMatchingFontDescriptorsSortedWithCallback
-* [62] CVPixelFormatDescriptionRegisterDescriptionWithPixelFormatType
-* [62] CMVideoFormatDescriptionGetExtensionKeysCommonWithImageBuffers
-* [62] MACaptionAppearanceCopyPreferredCaptioningMediaCharacteristics
-* [61] CFLocaleCreateCanonicalLocaleIdentifierFromScriptManagerCodes
-* [58] CVPixelFormatDescriptionArrayCreateWithAllPixelFormatTypes
-* [58] CMBufferQueueGetCallbacksForSampleBuffersSortedByOutputPTS
-* [57] ABAddressBookCopyArrayOfAllPeopleInSourceWithSortOrdering
-* [57] vImageMultiDimensionalInterpolatedLookupTable_Planar16Q12
-* [57] vImageAlphaBlend_NonpremultipliedToPremultiplied_ARGB8888
+* [87] CMMetadataFormatDescriptionCreateWithMetadataFormatDescriptionAndMetadataSpecifications
+* [86] CMClosedCaptionFormatDescriptionCreateFromBigEndianClosedCaptionDescriptionBlockBuffer
+* [82] CMClosedCaptionFormatDescriptionCopyAsBigEndianClosedCaptionDescriptionBlockBuffer
+* [79] CMClosedCaptionFormatDescriptionCreateFromBigEndianClosedCaptionDescriptionData
+* [76] CMTimeCodeFormatDescriptionCreateFromBigEndianTimeCodeDescriptionBlockBuffer
+* [76] CMMetadataFormatDescriptionCreateFromBigEndianMetadataDescriptionBlockBuffer
+* [72] CMMetadataFormatDescriptionCopyAsBigEndianMetadataDescriptionBlockBuffer
+* [72] CMTimeCodeFormatDescriptionCopyAsBigEndianTimeCodeDescriptionBlockBuffer
+* [70] CMAudioFormatDescriptionCreateFromBigEndianSoundDescriptionBlockBuffer
+* [70] CMVideoFormatDescriptionCreateFromBigEndianImageDescriptionBlockBuffer
 
 Longest Enum Names
 ----------------
+* [47] NSDateComponentsFormatterZeroFormattingBehavior
+* [46] EAWiFiUnconfiguredAccessoryConfigurationStatus
+* [43] AVAudioSessionSilenceSecondaryAudioHintType
+* [42] AVAudioEnvironmentDistanceAttenuationModel
 * [41] NSPersistentStoreUbiquitousTransitionType
 * [41] UIPageViewControllerNavigationOrientation
+* [40] NSXMLParserExternalEntityResolvingPolicy
 * [40] UIImagePickerControllerCameraCaptureMode
 * [39] UIPageViewControllerNavigationDirection
-* [38] UIImagePickerControllerCameraFlashMode
-* [38] CBPeripheralManagerAuthorizationStatus
-* [36] NSAttributedStringEnumerationOptions
-* [36] NSURLSessionAuthChallengeDisposition
-* [36] CBPeripheralManagerConnectionLatency
-* [35] UIImagePickerControllerCameraDevice
+* [39] HMCharacteristicValueLockMechanismState
 
 Longest Enum Constant Names
 ----------------
-* [64] kCFStreamErrorHTTPSProxyFailureUnexpectedResponseToCONNECTMethod
-* [63] NSPersistentStoreUbiquitousTransitionTypeInitialImportCompleted
-* [63] NSDataWritingFileProtectionCompleteUntilFirstUserAuthentication
-* [61] kCMBufferQueueTrigger_WhenDurationBecomesGreaterThanOrEqualTo
-* [61] NSAttributedStringEnumerationLongestEffectiveRangeNotRequired
-* [58] kCMBufferQueueTrigger_WhenDurationBecomesLessThanOrEqualTo
-* [58] kAudioSessionProperty_OverrideCategoryEnableBluetoothInput
-* [57] kCMBufferQueueTrigger_WhenMaxPresentationTimeStampChanges
-* [57] kAudioFileGlobalInfo_AvailableStreamDescriptionsForFormat
-* [57] AVAudioSessionRouteChangeReasonNoSuitableRouteForCategory
+* [87] HMCharacteristicValueLockMechanismLastKnownActionUnsecuredUsingPhysicalMovementInterior
+* [87] HMCharacteristicValueLockMechanismLastKnownActionUnsecuredUsingPhysicalMovementExterior
+* [85] HMCharacteristicValueLockMechanismLastKnownActionSecuredUsingPhysicalMovementInterior
+* [85] HMCharacteristicValueLockMechanismLastKnownActionSecuredUsingPhysicalMovementExterior
+* [82] HMCharacteristicValueLockMechanismLastKnownActionSecuredWithAutomaticSecureTimeout
+* [72] EAWiFiUnconfiguredAccessoryConfigurationStatusUserCancelledConfiguration
+* [68] HMCharacteristicValueLockMechanismLastKnownActionUnsecuredWithKeypad
+* [66] HMCharacteristicValueLockMechanismLastKnownActionUnsecuredRemotely
+* [66] kCMFormatDescriptionBridgeError_InvalidSerializedSampleDescription
+* [66] kCMFormatDescriptionBridgeError_UnsupportedSampleDescriptionFlavor
 
 Longest Variable Constant Names
 ----------------
 * [96] kCMSampleBufferConduitNotificationParameter_UpcomingOutputPTSRangeMayOverlapQueuedOutputPTSRange
 * [81] kCMTextMarkupAttribute_OrthogonalLinePositionPercentageRelativeToWritingDirection
+* [78] kVTDecompressionPropertyKey_MinOutputPresentationTimeStampOfFramesBeingDecoded
+* [78] kVTDecompressionPropertyKey_MaxOutputPresentationTimeStampOfFramesBeingDecoded
 * [74] MFMessageComposeViewControllerTextMessageAvailabilityDidChangeNotification
+* [72] kCMMetadataFormatDescriptionMetadataSpecificationKey_ExtendedLanguageTag
 * [71] kCMTextMarkupAttribute_TextPositionPercentageRelativeToWritingDirection
-* [66] kCMTextMarkupAttribute_BaseFontSizePercentageRelativeToVideoHeight
-* [64] kCMSampleBufferConduitNotificationParameter_MinUpcomingOutputPTS
-* [64] kCMSampleBufferConduitNotification_UpcomingOutputPTSRangeChanged
-* [64] AVPlayerItemLegibleOutputTextStylingResolutionSourceAndRulesOnly
-* [64] kCMSampleBufferConduitNotificationParameter_MaxUpcomingOutputPTS
-* [62] NSPersistentStoreDidImportUbiquitousContentChangesNotification
+* [69] kVTDecompressionPropertyKey_SupportedPixelFormatsOrderedByPerformance
+* [68] kVTDecompressionPropertyKey_PixelFormatsWithReducedResolutionSupport
+* [67] AVMetadataIdentifierID3MetadataOfficialInternetRadioStationHomepage
 
-
-Longest Names For MacOSX x86_64
+Longest Names For MacOSX x86_64 (OS X 10.10)
 ================
 
 Longest Objective-C Interface Names
 ----------------
+* [47] AVAssetResourceLoadingContentInformationRequest
 * [43] ICScannerFunctionalUnitPositiveTransparency
 * [43] ICScannerFunctionalUnitNegativeTransparency
 * [41] AVMutableVideoCompositionLayerInstruction
 * [37] ICScannerFunctionalUnitDocumentFeeder
+* [37] AVAsynchronousVideoCompositionRequest
 * [36] GKFriendRequestComposeViewController
 * [36] AVMutableVideoCompositionInstruction
 * [36] AVAssetWriterInputPixelBufferAdaptor
 * [35] IOBluetoothDeviceSelectorController
-* [35] AVAssetReaderVideoCompositionOutput
-* [35] GKTurnBasedMatchmakerViewController
 
 Longest Objective-C Protocol Names
 ----------------
@@ -164,15 +164,15 @@ Longest Objective-C Protocol Names
 Longest Objective-C Property Names
 ----------------
 * [54] availableMediaCharacteristicsWithMediaSelectionOptions
+* [46] automaticallyEnablesLowLightBoostWhenAvailable
+* [45] requiredPixelBufferAttributesForRenderContext
+* [42] appliesMediaSelectionCriteriaAutomatically
 * [41] animatesToStartingPositionsOnCancelOrFail
 * [40] incrementalSearchingShouldDimContentView
 * [40] acceptsThresholdForBlackAndWhiteScanning
 * [40] defaultThresholdForBlackAndWhiteScanning
-* [37] usesThresholdForBlackAndWhiteScanning
-* [37] displaysPostProcessApplicationControl
-* [36] availableImageDataCVPixelFormatTypes
-* [34] requireAdministratorForAssociation
-* [34] automaticallyAdjustsVideoMirroring
+* [40] seekingWaitsForVideoCompositionRendering
+* [38] enablesVideoStabilizationWhenAvailable
 
 Longest Objective-C Method Names
 ----------------
@@ -194,11 +194,11 @@ Longest Objective-C Method Names (0/1 Parameter)
 * [56] requestNotificationOfMediaDataChangeWithAdvanceInterval:
 * [55] captureOutputShouldProvideSampleAccurateRecordingStart:
 * [54] availableMediaCharacteristicsWithMediaSelectionOptions
+* [54] startWirelessControllerDiscoveryWithCompletionHandler:
 * [54] loadDefaultLeaderboardCategoryIDWithCompletionHandler:
 * [54] accommodatePresentedItemDeletionWithCompletionHandler:
 * [52] continueWithoutCredentialForAuthenticationChallenge:
-* [52] chapterMetadataGroupsBestMatchingPreferredLanguages:
-* [52] associatedMediaSelectionOptionInMediaSelectionGroup:
+* [52] selectMediaOptionAutomaticallyInMediaSelectionGroup:
 
 Longest C Function Names
 ----------------
@@ -209,22 +209,22 @@ Longest C Function Names
 * [62] CVPixelFormatDescriptionRegisterDescriptionWithPixelFormatType
 * [62] CMVideoFormatDescriptionGetExtensionKeysCommonWithImageBuffers
 * [62] IOBluetoothOBEXSessionCreateWithIOBluetoothSDPServiceRecordRef
+* [62] MACaptionAppearanceCopyPreferredCaptioningMediaCharacteristics
 * [61] CFLocaleCreateCanonicalLocaleIdentifierFromScriptManagerCodes
 * [60] IOBluetoothRegisterForFilteredRFCOMMChannelOpenNotifications
-* [59] IOBluetoothRegisterForFilteredL2CAPChannelOpenNotifications
 
 Longest Enum Names
 ----------------
 * [47] BluetoothLESecurityManagerKeyDistributionFormat
 * [44] BluetoothHCIExtendedInquiryResponseDataTypes
+* [44] AVCaptureDeviceTransportControlsPlaybackMode
 * [43] IOBluetoothUserNotificationChannelDirection
+* [43] NSTableViewDraggingDestinationFeedbackStyle
+* [41] NSPersistentStoreUbiquitousTransitionType
 * [41] BluetoothAuthenticationRequirementsValues
+* [40] NSXMLParserExternalEntityResolvingPolicy
 * [39] BluetoothHCITransmitReadPowerLevelTypes
 * [38] SDPAttributeDeviceIdentificationRecord
-* [37] BluetoothHCIRetransmissionEffortTypes
-* [37] BluetoothHCIAFHChannelAssessmentModes
-* [36] BluetoothHCIGeneralFlowControlStates
-* [36] BluetoothHCIDeleteStoredLinkKeyFlags
 
 Longest Enum Constant Names
 ----------------
@@ -242,12 +242,12 @@ Longest Enum Constant Names
 Longest Variable Constant Names
 ----------------
 * [96] kCMSampleBufferConduitNotificationParameter_UpcomingOutputPTSRangeMayOverlapQueuedOutputPTSRange
+* [81] kCMTextMarkupAttribute_OrthogonalLinePositionPercentageRelativeToWritingDirection
 * [78] kVTDecompressionPropertyKey_MaxOutputPresentationTimeStampOfFramesBeingDecoded
 * [78] kVTDecompressionPropertyKey_MinOutputPresentationTimeStampOfFramesBeingDecoded
+* [71] kCMTextMarkupAttribute_TextPositionPercentageRelativeToWritingDirection
 * [69] kVTDecompressionPropertyKey_SupportedPixelFormatsOrderedByPerformance
 * [68] kVTDecompressionPropertyKey_PixelFormatsWithReducedResolutionSupport
-* [65] kVTDecompressionPropertyKey_SupportedPixelFormatsOrderedByQuality
-* [64] kCMSampleBufferConduitNotificationParameter_MinUpcomingOutputPTS
-* [64] kCMSampleBufferConduitNotificationParameter_MaxUpcomingOutputPTS
-* [64] kCMSampleBufferConduitNotification_UpcomingOutputPTSRangeChanged
-* [62] NSPersistentStoreDidImportUbiquitousContentChangesNotification
+* [67] kVTVideoEncoderSpecification_RequireHardwareAcceleratedVideoEncoder
+* [67] kVTVideoDecoderSpecification_RequireHardwareAcceleratedVideoDecoder
+* [66] kVTVideoEncoderSpecification_EnableHardwareAcceleratedVideoEncoder
