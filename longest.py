@@ -50,7 +50,9 @@ if __name__ == '__main__':
     for framework_dir in os.listdir(frameworks_root):
         framework, ext = os.path.splitext(framework_dir)
         if ext == '.framework':
-            all_headers += '#import <%s/%s.h>\n' % (framework, framework)
+            header_path = os.path.join(frameworks_root, framework_dir, 'Headers', framework + '.h')
+            if os.path.exists(header_path):
+                all_headers += '#import <%s/%s.h>\n' % (framework, framework)
     
     import_filename = 'ImportAll.h'
     with open(import_filename, 'w') as import_file:
