@@ -42,10 +42,7 @@ if __name__ == '__main__':
     print
     
     # SDK and frameworks root dir
-    xcode_root = subprocess.check_output(['xcode-select', '-p']).strip()
-    platform_root = os.path.join(xcode_root, 'Platforms', platform_name + '.platform')
-    sdks_root = os.path.join(platform_root, 'Developer/SDKs')
-    sdk_root = os.path.join(sdks_root, os.listdir(sdks_root)[-1])
+    sdk_root = subprocess.check_output(['xcrun', '--sdk', plat, '--show-sdk-path']).strip()
     frameworks_root = os.path.join(sdk_root, 'System/Library/Frameworks')
     
     # Import all frameworks in one .h file
@@ -62,11 +59,12 @@ if __name__ == '__main__':
     # Extract AST for all frameworks with command:
     #   clang -isysroot */SDKs/iPhoneSimulator7.0.sdk -Xclang -ast-dump -fblocks -x objective-c ImportAll.h
     FNULL = open(os.devnull, 'w')
-    p = subprocess.Popen(['clang',
+    p = subprocess.Popen(['xcrun', 'clang',
                           '-isysroot', sdk_root,
                           '-Xclang',
                           '-ast-dump',
-                          '-fblocks', '-x', 'objective-c',
+                          '-fblocks',
+                          '-x', 'objective-c',
                           '-arch', arch,
                           import_filename],
                           stdout=subprocess.PIPE,
