@@ -4,19 +4,23 @@ import os, sys
 import subprocess
 import re
 
-NAME_COUNT = 10
+
+NAME_LIMIT = 10
+
 
 def usage():
     print 'Usage: python', sys.argv[0], '<platform>'
-    print '<platform> may be iPhoneOS, iPhoneSimulator or MacOSX'
+    print '<platform> may be iPhoneOS, MacOSX or WatchOS'
+
 
 def outputLongestNames(title, names):
     print 'Longest', title
     print '----------------'
     names = sorted(names, key=lambda item: len(item), reverse=True)
-    for name in names[:NAME_COUNT]:
+    for name in names[:NAME_LIMIT]:
         print '* [%02d] %s' % (len(name), name)
     print
+
 
 if __name__ == '__main__':
     # Determine platform
@@ -24,18 +28,17 @@ if __name__ == '__main__':
     if (len(sys.argv) > 1):
         plat = sys.argv[1].lower()
     
-    if plat == 'iphoneos':
-        platform_name = 'iPhoneOS'
-        arch = 'armv7'
-    elif plat == 'iphonesimulator':
-        platform_name = 'iPhoneSimulator'
-        arch = 'i386'
-    elif plat == 'macosx':
-        platform_name = 'MacOSX'
-        arch = 'x86_64'
-    else:
+    platform_map = {
+        'iphoneos': ('iPhoneOS', 'arm64'),
+        'macosx': ('MacOSX', 'x86_64'),
+        'watchos': ('WatchOS', 'armv7k'),
+    }
+
+    if plat not in platform_map:
         usage()
         exit(1)
+
+    platform_name, arch = platform_map[plat]
     
     print 'Longest Names For', platform_name, arch
     print '================'
@@ -99,7 +102,7 @@ if __name__ == '__main__':
     
     for type, title in types:
         names = set()
-        for m in re.finditer(type + r'.*\<.*\>[\s+-]*(\S+)', ast):
+        for m in re.finditer(r'\b' + type + r'.*\<.*\>.*?(?::\d+){1,2}[\s+-]+(\S+)', ast):
             names.add(m.group(1))
         outputLongestNames(title, names)
     
