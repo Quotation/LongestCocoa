@@ -9,16 +9,16 @@ NAME_LIMIT = 10
 
 
 def usage():
-    print 'Usage: python', sys.argv[0], '<platform>'
-    print '<platform> may be iPhoneOS, MacOSX or WatchOS'
+    print('Usage: python', sys.argv[0], '<platform>')
+    print('<platform> may be iPhoneOS, MacOSX or WatchOS')
 
 
 def outputLongestNames(title, names):
-    print 'Longest', title
-    print '----------------'
+    print('Longest', title)
+    print('----------------')
     names = sorted(names, key=lambda item: len(item), reverse=True)
     for name in names[:NAME_LIMIT]:
-        print '* [%02d] %s' % (len(name), name)
+        print('* [%02d] %s' % (len(name), name))
     print
 
 
@@ -40,12 +40,12 @@ if __name__ == '__main__':
 
     platform_name, arch = platform_map[plat]
     
-    print 'Longest Names For', platform_name, arch
-    print '================'
+    print('Longest Names For', platform_name, arch)
+    print('================')
     print
     
     # SDK and frameworks root dir
-    sdk_root = subprocess.check_output(['xcrun', '--sdk', plat, '--show-sdk-path']).strip()
+    sdk_root = subprocess.check_output(['xcrun', '--sdk', plat, '--show-sdk-path']).decode("utf-8").strip()
     frameworks_root = os.path.join(sdk_root, 'System/Library/Frameworks')
     
     # Import all frameworks in one .h file
@@ -76,6 +76,7 @@ if __name__ == '__main__':
                           stderr=FNULL)
     
     ast, _ = p.communicate()
+    ast = ast.decode("utf-8")
     os.remove(import_filename)
     
     # Remove console color codes
